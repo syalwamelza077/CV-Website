@@ -1,0 +1,329 @@
+/* =====================================================
+   PALET WARNA YANG DIPAKAI
+   #BFECFF  biru muda
+   #CDC1FF  ungu lavender
+   #FFF6E3  krem
+   #FFCCEA  pink muda
+   #F0A8D0  pink sedang
+   #F7B5CA  pink rose
+   #FFC6C6  salmon muda
+   #FFEBD4  peach
+   Warna teks: #4A4458 (abu keunguan gelap, supaya mudah dibaca)
+   ===================================================== */
+
+
+/* ===== Pengaturan umum (selector elemen) ===== */
+* {
+    box-sizing: border-box; /* supaya padding tidak menambah lebar elemen */
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #4A4458;
+    background-color: #FFF6E3;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ===== Navigasi ===== */
+nav {
+    background-color: #FFCCEA;
+    text-align: center;
+    padding: 14px;
+}
+
+nav a {
+    color: #4A4458;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 0 14px;
+}
+
+nav a:hover {
+    color: #F0A8D0;
+    text-decoration: underline;
+}
+
+
+/* ===== Header / Profil (selector id) ===== */
+#profil {
+    background-color: #CDC1FF;
+    padding: 45px 20px;
+}
+
+/* bagian foto + teks dibuat bersebelahan */
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;       /* kalau layar sempit, foto pindah ke atas */
+    align-items: center;
+    justify-content: center;
+}
+
+.foto-profil {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;          /* foto dipotong rapi, tidak gepeng */
+    object-position: top;       /* bagian wajah tetap kelihatan */
+    border: 6px solid white;
+    border-radius: 50%;         /* membuat foto jadi bulat */
+    margin: 10px 30px 10px 0;
+}
+
+.hero-teks {
+    flex: 1;
+    min-width: 280px;
+}
+
+.sapaan {
+    margin: 0;
+    font-size: 16px;
+}
+
+#profil h1 {
+    font-size: 34px;
+    color: #4A4458;
+    margin: 0 0 5px 0;
+}
+
+#profil h2 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #8A5FA0;
+    margin: 0 0 15px 0;
+}
+
+.bio {
+    text-align: justify;
+    margin: 0 0 10px 0;
+}
+
+.info-singkat {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* ===== Kotak highlight ===== */
+.highlight {
+    max-width: 900px;
+    margin: 30px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.kotak-highlight {
+    width: 23%;
+    min-width: 140px;
+    text-align: center;
+    padding: 15px 10px;
+    margin: 8px 0;
+    border: 2px solid white;
+    border-radius: 12px;
+}
+
+.kotak-highlight p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.kotak-highlight .angka {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.warna1 { background-color: #BFECFF; }
+.warna2 { background-color: #FFCCEA; }
+.warna3 { background-color: #FFEBD4; }
+.warna4 { background-color: #FFC6C6; }
+
+
+/* ===== Layout utama ===== */
+main {
+    max-width: 900px;
+    margin: 0 auto;      /* membuat konten berada di tengah */
+    padding: 30px 20px;
+}
+
+section {
+    background-color: white;
+    border: 2px solid #F0A8D0;
+    border-radius: 14px;
+    margin-bottom: 30px;
+    padding: 28px;
+}
+
+h3 {
+    font-size: 26px;
+    color: #4A4458;
+    border-bottom: 4px solid #F0A8D0;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+h4 {
+    font-size: 17px;
+    color: #8A5FA0;
+    margin: 22px 0 10px 0;
+}
+
+
+/* ===== Kartu pendidikan & pengalaman (box model) ===== */
+.kartu {
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 16px 20px;
+    margin-bottom: 15px;
+}
+
+.kartu p {
+    margin: 2px 0;
+}
+
+.kartu ul {
+    margin: 8px 0 0 0;
+    padding-left: 20px;
+}
+
+/* baris judul: nama di kiri, tahun di kanan */
+.baris-judul {
+    display: flex;
+    justify-content: space-between;  /* satu di kiri, satu di kanan */
+    flex-wrap: wrap;                 /* di HP, tahun turun ke bawah */
+}
+
+.judul-item {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.tahun {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6B5B7B;
+    text-align: right;
+}
+
+.lokasi {
+    font-size: 14px;
+}
+
+/* warna tiap kartu */
+.biru   { background-color: #BFECFF; }
+.ungu   { background-color: #CDC1FF; }
+.pink   { background-color: #FFCCEA; }
+.peach  { background-color: #FFEBD4; }
+.salmon { background-color: #FFC6C6; }
+
+
+/* ===== Tag skill ===== */
+.tag {
+    display: inline-block;
+    padding: 5px 14px;
+    margin: 0 6px 8px 0;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.tag-pink  { background-color: #F7B5CA; }
+.tag-biru  { background-color: #BFECFF; }
+.tag-ungu  { background-color: #CDC1FF; }
+.tag-peach { background-color: #FFEBD4; border: 1px solid #F0A8D0; }
+
+
+/* ===== Form kontak ===== */
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 14px;
+    margin-bottom: 4px;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #CDC1FF;
+    border-radius: 8px;
+    background-color: #FFF6E3;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 14px;
+    color: #4A4458;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #F0A8D0;
+    outline: none;
+}
+
+button {
+    background-color: #F0A8D0;
+    color: #4A4458;
+    border: none;
+    border-radius: 8px;
+    padding: 11px 26px;
+    margin-top: 18px;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #F7B5CA;
+}
+
+
+/* ===== Sosial media ===== */
+.sosmed a {
+    color: #8A5FA0;
+    font-weight: 600;
+}
+
+.sosmed a:hover {
+    color: #F0A8D0;
+}
+
+
+/* ===== Footer ===== */
+footer {
+    background-color: #CDC1FF;
+    text-align: center;
+    padding: 18px;
+    font-size: 14px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* ===== Tampilan HP (layar kecil) ===== */
+@media (max-width: 600px) {
+    .hero {
+        text-align: center;
+    }
+
+    .foto-profil {
+        margin-right: 0;
+    }
+
+    .bio {
+        text-align: left;
+    }
+
+    .kotak-highlight {
+        width: 48%;
+    }
+}
